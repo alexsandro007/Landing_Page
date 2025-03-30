@@ -77,6 +77,112 @@ body {
     display: none;
 }
 
+/* Секция баннера */
+.banner {
+    background-color: #FED100;
+    padding: 141px 0 85px 0;
+}
+
+.banner__container {
+    max-width: 1312px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: relative;
+}
+
+.banner__content {
+    max-width: 50%;
+}
+
+.banner__content h1 {
+    font-size: 70px;
+    font-weight: 700;
+    margin-bottom: 28px;
+    color: #333;
+}
+
+.banner__content p {
+    font-size: 30px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 50px;
+}
+
+.banner__button{
+    display: block;
+    margin-bottom: 74px;
+}
+
+.banner__button_container{
+    position: relative;
+    z-index: 1;
+}
+
+.banner__button_up {
+    display: inline-block;
+    background-color: #FF352B;
+    color: #F2F2F2;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 15px 95px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+.banner__button_down {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border: 2px solid #F2F2F2;
+    height: 60px;
+    width: 304px;
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+.banner__button:hover .banner__button_up {
+    background-color: #FF772B;
+    color: #fff;
+}
+
+.banner__button:hover .banner__button_down {
+    background: #F2F2F2;
+}
+
+/* Иконки */
+.banner__features {
+    display: flex;
+    width: 547px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.feature p {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* Изображение */
+.banner__image img {
+    position: absolute;
+    max-width: 553px;
+    top: -83px;
+    right: 0;
+}
+
+.banner__image__adaptive{
+    display: none;
+}
+
 /* Main */
 main {
     padding-top: 150px; 
@@ -211,6 +317,165 @@ main {
     .header__phone.active {
         right: 0;
     }
+
+    /* Секция баннера */
+    .banner {
+        background: #FED100;
+        padding-top: 112px;
+        padding-bottom: 48px;
+        height: auto;
+        width: 100%;
+    }
+
+    .banner__container {
+        margin: 0 auto;
+        padding: 0 100px;
+        position: relative;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner__content {
+        max-width: 100%;
+    }
+
+    .banner__content h1 {
+        font-size: 56px;
+        font-weight: 700;
+        margin-bottom: 4px;
+        color: #333;
+    }
+
+    .banner__content p {
+        font-size: 36px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 50px;
+    }
+
+    .banner__button{
+        display: block;
+        margin-bottom: 44px;
+        margin-top: -5px;
+    }
+
+    .banner__button_container {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .banner__button_up {
+        font-size: 30px;
+        padding: 18px 116px;
+    }
+    
+    .banner__button_down {
+        height: 74px;
+        width: 375px;
+    }
+
+    /* Иконки */
+    .banner__features {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .feature p {
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    /* Изображение */
+    .banner__image{
+        display: none;
+    }
+
+    .banner__image__adaptive {
+        display: block;
+        margin-top: -100px;
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 620px) {
+    .banner__container{
+        padding: 0 20px;
+    }
+
+    .banner__content h1 {
+        font-size: 42px;
+    }
+
+    .banner__content p {
+        font-size: 24px;
+    }
+
+    .feature p {
+        font-size: 14px;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    /* Изображение */
+    .banner__image__adaptive {
+        margin-top: -90px;
+    }
+
+    .banner__image__adaptive img{
+        width: 300px;
+    }
+}
+
+@media (max-width: 460px) {
+    .banner{
+        padding-bottom: 40px;
+    }
+
+    .banner__container{
+        padding: 0 10px;
+        width: 100%;
+    }
+
+    .banner__content h1 {
+        font-size: 40px;
+    }
+
+    .banner__content p {
+        font-size: 22px;
+    }
+
+    .banner__button_container{
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .banner__button_up{
+        width: 100%;
+        padding: 18px;
+    }
+
+    .banner__button_down {
+        display: none;
+    }
+
+    /* Иконки */
+    .banner__features {
+        display: none;
+    }
+
+    /* Изображение */
+    .banner__image__adaptive {
+        margin-top: -90px;
+    }
+
+    .banner__image__adaptive img{
+        width: 280px;
+    }
 }
 
 /* Адаптивность для экранов до 320px */
@@ -228,7 +493,7 @@ main {
     .header__burger{
         height: 19px;
         width: 32px;
-        margin-right: -20px;
+        margin-right: -10px;
     }
 
     .header__burger span {
@@ -271,5 +536,49 @@ main {
         font-size: 18px;
         font-weight: 600;
         margin-top: 543px;
+    }
+
+    .banner {
+        padding-top: 80px;
+        padding-bottom: 0px;
+    }
+
+    .banner__container {
+        padding: 0 10px;
+    }
+
+    .banner__content h1 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 6px;
+    }
+
+    .banner__content p {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .banner__button_container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .banner__button_up {
+        font-size: 20px;
+        font-weight: 600;
+        padding: 18px 99px;
+        width: 100%;
+    }
+
+    /* Изображение */
+    .banner__image__adaptive {
+        margin-top: -80px;
+        margin-left: 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .banner__image__adaptive img {
+        width: 250px;
     }
 }
