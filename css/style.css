@@ -1,3 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Стили для header */
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    background-color: #FED100; 
+    padding: 40px 0; 
+}
+
+/* Контейнер для центрирования */
+.header__container {
+    max-width: 1312px;
+    margin: 0 auto; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 20px; 
+}
+
+/* Логотип */
+.header__logo {
+    font-size: 30px; 
+    font-weight: 600; 
+    color: #333333; 
+    text-decoration: none;
+}
+
+/* Навигация */
+.header__nav ul {
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    gap: 20px; 
+}
+
+.header__nav a {
+    color: #333333; 
+    text-decoration: none; 
+    font-size: 18px; 
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.header__nav a:hover {
+    color: #fff;
+}
+
+.header__nav a.active {
+    display: none;
+    transition: all 0.3s ease;
+}
+
+/* Телефон */
+.header__phone {
+    color: #333333; 
+    font-size: 24px; 
+    font-weight: 600; 
+    text-decoration: underline; 
+    transition: all 0.3s ease;  
+}
+
+.header__phone:hover {
+    color: #fff;
+}
+
+/* Бургер-меню */
+.header__burger {
+    display: none;
+}
+
+/* Main */
+main {
+    padding-top: 150px; 
+}
+
+/* Адаптивность для экранов до 768px */
+@media (max-width: 768px) {
+    .header {
+        padding: 29px 0;
+    }
+
+    .header__container {
+        gap: 10px; 
+    }
+
+    .header__logo {
+        font-size: 36px; 
+        font-weight: 600;
+    }
+
+    .header__burger {
+        display: block; 
+        position: relative;
+        width: 46px; 
+        height: 28px; 
+        cursor: pointer; 
+        z-index: 11;
+        margin-right: 20px;
+    }
+
+    .header__burger span,
+    .header__burger:before,
+    .header__burger:after {
+        content: "";
+        background-color: #333333; 
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease;
+    }
+
+    .header__burger span {
+        top: 13px;
+    }
+
+    .header__burger:before {
+        top: 0;
+    }
+
+    .header__burger:after {
+        bottom: 0;
+    }
+
+    /* Анимация бургер-меню при открытии */
+    .header__burger.active span {
+        transform: scale(0);
+    }
+
+    .header__burger.active:before {
+        transform: rotate(-45deg);
+        top: 20px;
+        width: 55%;
+        height: 3px;
+    }
+
+    .header__burger.active:after {
+        transform: rotate(45deg);
+        bottom: 21px;
+        width: 55%;
+        height: 3px;
+    }
+
+    /* Навигация и телефон в выпадающем меню */
+    .header__nav {
+        position: fixed;
+        top: 0; 
+        right: -100%;
+        width: 296px;
+        height: 100%;
+        border-radius: 32px 0 0 32px;
+        background-color: #fff;
+        padding: 173px 0 20px 0; 
+        transition: all 0.3s ease;
+        overflow: auto;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        z-index: 10;
+    }
+
+    .header__nav.active {
+        right: 0;
+    }
+
+    .header__nav ul {
+        flex-direction: column; 
+        text-align: start;
+        gap: 0;
+        width: 100%;
+    }
+
+    .header__nav a {
+        font-size: 28px; 
+        font-weight: 500;
+        display: block; 
+        padding: 20px 38px; 
+        width: 100%;
+    }
+
+    .header__nav a.active {
+        display: block;
+        background-color: #000;
+        color: #fff;
+    }
+
+    .header__phone {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 296px;
+        
+        background-color: #fff; 
+        padding: 20px 48px;
+        transition: all 0.3s ease;
+        z-index: 10; 
+        font-size: 24px;
+        font-weight: 600;
+        margin-top: 543px; 
+    }
+
+    .header__phone.active {
+        right: 0;
+    }
+}
+
+/* Адаптивность для экранов до 320px */
+@media (max-width: 320px) {
+    .header {
+        padding: 28px 0;
+    }
+
+    .header__logo {
+        font-size: 16px;
+        font-weight: 600;
+        z-index: 11;
+    }
+
+    .header__burger{
+        height: 19px;
+        width: 32px;
+        margin-right: -20px;
+    }
+
+    .header__burger span {
+        top: 8.5px;
+    }
+
+    /* Анимация бургер-меню при открытии */
+    .header__burger.active:before {
+        transform: rotate(-45deg);
+        top: 14px;
+        width: 55%;
+        height: 3px;
+    }
+
+    .header__burger.active:after {
+        transform: rotate(45deg);
+        bottom: 13px;
+        width: 55%;
+        height: 3px;
+    }
+
+    /* Навигация и телефон в выпадающем меню */
+    .header__nav {
+        right: -150%;
+        width: 100%;
+        border-radius: 0;
+        padding: 117px 0 20px 0;
+    }
+
+    .header__nav a {
+        padding: 20px 44px;
+        width: 100%;
+    }
+
+    .header__phone {
+        right: -150%;
+        width: 100%;
+        
+        padding: 20px 76px;
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: 543px;
+    }
 }
