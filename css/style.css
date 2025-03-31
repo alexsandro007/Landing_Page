@@ -183,6 +183,90 @@ body {
     display: none;
 }
 
+/* Секция "Как это происходит?" */
+.process {
+    background-color: #fff; /* Белый фон */
+    padding: 96px 0; /* Отступы сверху и снизу */
+}
+
+.process__container {
+    max-width: 1105px; /* Максимальная ширина контейнера */
+    margin: 0 auto; /* Центрирование */
+    padding: 0 20px; /* Отступы слева и справа */
+}
+
+.process__title {
+    font-size: 30px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.process__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Сетка 2x2 */
+    column-gap: 115px; /* Расстояние между колонками */
+    row-gap: 48px; /* Расстояние между строками */
+}
+
+.process__item {
+    display: flex;
+}
+
+.process__item div{
+    width: 90%;
+}
+
+.process__number {
+    font-size: 50px;
+    font-weight: 300;
+    color: #FED100;
+    margin-top: -8px;
+    position: relative;
+    width: 30%;
+}
+
+.process__number::after{
+    color: #333;
+    position: absolute;
+    left: -2px;
+}
+
+#first::after{
+    content: "01";
+}
+
+#second::after{
+    content: "02";
+}
+
+#third::after{
+    content: "03";
+}
+
+#fourth::after{
+    content: "04";
+}
+
+.process__subtitle {
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+.process__text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    line-height: 1.31;
+}
+
+.process__arrow{
+    display: none;
+}
+
 /* Main */
 main {
     padding-top: 150px; 
@@ -398,7 +482,42 @@ main {
     .banner__image__adaptive {
         display: block;
         margin-top: -100px;
-        margin-left: 50px;
+        margin-left: 20px;
+    }
+
+    .process {
+        padding: 101px 0;
+        max-width: 620px;
+        margin: 0 auto;
+    }
+
+    .process__title {
+        margin-bottom: 53px;
+    }
+
+    .process__items {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .process__item {
+        gap: 15px;
+    }
+
+    .process__number {
+        font-size: 90px;
+        margin-top: -8px;
+    }
+
+    .process__subtitle {
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 17px;
+    }
+
+    .process__text {
+        font-size: 16px;
+        font-weight: 400;
     }
 }
 
@@ -428,6 +547,28 @@ main {
 
     .banner__image__adaptive img{
         width: 300px;
+    }
+
+    .process__content{
+        width: 70%;
+    }
+
+    .process__number {
+        font-size: 70px;
+        text-align: end;
+        width: 33%;
+    }
+
+    .process__number::after {
+        right: 2px;
+    }
+
+    .process__subtitle {
+        font-size: 20px;
+    }
+
+    .process__text {
+        font-size: 12px;
     }
 }
 
@@ -580,5 +721,66 @@ main {
 
     .banner__image__adaptive img {
         width: 250px;
+    }
+
+    .process {
+        padding: 65px 0;
+        max-width: 295px;
+        margin: 0 auto;
+    }
+
+    .process__container {
+        padding: 0 15px;
+    }
+
+    .process__title {
+        font-size: 20px;
+        margin-bottom: 28px;
+    }
+
+    .process__items {
+        gap: 20px;
+    }
+
+    .process__item {
+        gap: 7px;
+    }
+
+    .process__content{
+        display: flex;
+    }
+
+    .process__number {
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+
+    .process__subtitle {
+        font-size: 16px;
+    }
+
+    .process__text {
+        display: none;
+    }
+
+    .process__arrow{
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .bx-chevron-down{
+        font-size: 40px;
+        margin-bottom: 30px;
+        transition: transform 0.3s ease;
+    }
+
+    .bx-chevron-down.active{
+        transform: rotate(180deg);
+    }
+
+    .process__text.active{
+        display: block;
     }
 }
