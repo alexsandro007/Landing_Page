@@ -185,14 +185,14 @@ body {
 
 /* Секция "Как это происходит?" */
 .process {
-    background-color: #fff; /* Белый фон */
-    padding: 96px 0; /* Отступы сверху и снизу */
+    background-color: #fff; 
+    padding: 96px 0 0 0; 
 }
 
 .process__container {
-    max-width: 1105px; /* Максимальная ширина контейнера */
-    margin: 0 auto; /* Центрирование */
-    padding: 0 20px; /* Отступы слева и справа */
+    max-width: 1105px; 
+    margin: 0 auto;
+    padding: 0 20px; 
 }
 
 .process__title {
@@ -205,9 +205,9 @@ body {
 
 .process__items {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Сетка 2x2 */
-    column-gap: 115px; /* Расстояние между колонками */
-    row-gap: 48px; /* Расстояние между строками */
+    grid-template-columns: repeat(2, 1fr); 
+    column-gap: 115px; 
+    row-gap: 48px; 
 }
 
 .process__item {
@@ -264,6 +264,102 @@ body {
 }
 
 .process__arrow{
+    display: none;
+}
+
+/* Секция "Цены" */
+.pricing {
+    padding: 102px 0 0 0;
+}
+
+.pricing__container {
+    max-width: 1305px;
+    margin: 0 auto;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.pricing__title {
+    font-size: 30px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+.pricing__subtitle {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 60px;
+}
+
+.pricing__items {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    /* margin-bottom: 40px; */
+}
+
+.pricing__item {
+    border: 1px solid #EBEBEB;
+    padding: 80px 80px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+.pricing__item:hover {
+    border: 1px solid #FED100;
+    cursor: pointer;
+    box-shadow: 0px 12px 25px 0px #00000026;
+}
+
+.pricing__item-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 60px;
+}
+
+.pricing__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 64px 0;
+}
+
+.pricing__list li {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.pricing__price {
+    font-size: 30px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 66px;
+}
+
+.pricing__button {
+    display: inline-block;
+    background-color: #FED100;
+    color: #333;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 13px 78px;
+    text-decoration: none;
+    transition: all 0.6s ease;
+}
+
+.pricing__button:hover {
+    background-color: #ffde33;
+    color: #fff;
+    box-shadow: 0px 4px 24px 0px #FED100;
+}
+
+.pricing__all-prices {
     display: none;
 }
 
@@ -486,7 +582,7 @@ main {
     }
 
     .process {
-        padding: 101px 0;
+        padding: 101px 0 205px 0;
         max-width: 620px;
         margin: 0 auto;
     }
@@ -518,6 +614,90 @@ main {
     .process__text {
         font-size: 16px;
         font-weight: 400;
+    }
+
+    /* Секция "Цены" */
+    .pricing {
+        padding: 60px 0 115px 0;
+        background-color: #F8FBFF;
+    }
+
+    .pricing__container {
+        max-width: 1305px;
+        margin: 0 auto;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .pricing__title {
+        margin-bottom: 12px;
+    }
+
+    .pricing__subtitle {
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 45px;
+    }
+
+    .pricing__items {
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+    }
+
+    .pricing__item {
+        display: none;
+    }
+
+    .pricing__item.active {
+        display: block;
+        width: 358px;
+        height: 100%;
+        padding: 0;
+        transition: all 0.3s ease;
+        border: none;
+    }
+
+    .pricing__item:hover {
+        border: none;
+        cursor: pointer;
+        box-shadow: none;
+    }
+
+    .pricing__item-title {
+        font-weight: 500;
+        margin-bottom: 31px;
+    }
+
+    .pricing__list {
+        margin: 0 0 48px 0;
+    }
+
+    .pricing__list li {
+        font-size: 18px;
+        margin-bottom: 24px;
+    }
+
+    .pricing__price {
+        margin-bottom: 16px;
+    }
+
+    .pricing__button {
+        font-size: 28px;
+        padding: 23px 114px;
+        margin-bottom: 28px;
+    }
+
+    .pricing__all-prices {
+        display: block;
+        width: 148px;
+        padding-bottom: 7px;
+        margin: 0 auto;
+        font-size: 25px;
+        font-weight: 500;
+        color: #333;
+        text-decoration: none;
+        border-bottom: 1px solid #333;
     }
 }
 
@@ -616,6 +796,43 @@ main {
 
     .banner__image__adaptive img{
         width: 280px;
+    }
+
+    .process{
+        padding: 65px 0 79px 0;
+    }
+
+    /* Секция "Цены" */
+    .pricing {
+        padding: 30px 0 50px 0;
+    }
+
+    .pricing__container {
+        max-width: 1305px;
+        margin: 0 auto;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .pricing__title {
+        margin-bottom: 16px;
+    }
+
+    .pricing__subtitle {
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 24px;
+    }
+
+    .pricing__item.active {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .pricing__button {
+        font-size: 24px;
+        padding: 20px;
+        width: 100%;
     }
 }
 
@@ -782,5 +999,75 @@ main {
 
     .process__text.active{
         display: block;
+    }
+
+    /* Секция "Цены" */
+    .pricing {
+        padding: 19px 0 31px 0;
+    }
+
+    .pricing__container {
+        padding: 0 17px;
+    }
+
+    .pricing__title {
+        font-size: 20px;
+        margin-bottom: 4px;
+    }
+
+    .pricing__subtitle {
+        width: 90%;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .pricing__items {
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+    }
+
+    .pricing__item {
+        display: none;
+    }
+
+    .pricing__item.active {
+        display: block;
+        width: 358px;
+        height: 100%;
+        padding: 0;
+        transition: all 0.3s ease;
+        border: none;
+    }
+
+    .pricing__item-title {
+        font-size: 18px;
+        margin-bottom: 24px;
+    }
+
+    .pricing__list {
+        margin: 0 0 45px 0;
+    }
+
+    .pricing__list li {
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+
+    .pricing__price {
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+
+    .pricing__button {
+        font-size: 20px;
+        padding: 17px;
+        margin-bottom: 20px;
+    }
+
+    .pricing__all-prices {
+        width: 85px;
+        padding-bottom: 0px;
+        font-size: 16px;
     }
 }
