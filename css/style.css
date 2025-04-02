@@ -642,6 +642,294 @@ body {
     border: none;
 }
 
+/* Секция "Заказ переезда" */
+.order {
+    padding: 124px 0 0 0;
+}
+
+.order__container {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.order__title {
+    font-size: 30px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.order__subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    text-align: start;
+    margin: 0 auto;
+    margin-bottom: 48px;
+    max-width: 670px;
+}
+
+.order__form {
+    max-width: 670px;
+    margin: 0 auto;
+}
+
+.order__group__conten{
+    display: flex;
+    gap: 70px;
+    margin-bottom: 62px;
+}
+
+.order__group {
+    flex: 1;
+}
+
+.order__group label {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 34px;
+}
+
+.order__group input[type="text"],
+.order__group input[type="tel"],
+.order__group select {
+    width: 100%;
+    padding: 5px 0 15px 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    border: none;
+    border-bottom: 1px solid #333;
+    background: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+.order__group select{
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>') no-repeat right center;
+    background-size: 20px;
+    cursor: pointer;
+}
+
+.order__group input[type="text"]::placeholder,
+.order__group input[type="tel"]::placeholder {
+    color: #666;
+}
+
+.order__group select {
+    cursor: pointer;
+}
+
+.order__radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 64px;
+}
+
+.order__radio-group label {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0;
+}
+
+.order__radio-group input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+.order__radio-group input[type="radio"]:checked {
+    border-color: #FED100;
+    background-color: #fff;
+}
+
+.order__radio-group input[type="radio"]:checked::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #FED100;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.order__additional-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.order__group .order__additional-label{
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: start;
+    gap: 6px;
+}
+
+.order__additional-label .bx-chevron-down {
+    font-size: 30px;
+    transition: all 0.3s ease;
+}
+
+.order__additional-content {
+    display: none;
+}
+
+.order__additional-content.active {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 32px;
+    column-gap: 40px;
+}
+
+.order__additional-content label {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 0px;
+}
+
+.order__additional-content input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #F8F8F8;
+    border: 2px solid #ccc;
+    border-radius: 2px;
+    position: relative;
+    cursor: pointer;
+}
+
+.order__additional-content input[type="checkbox"]:checked {
+    border-color: #FED100;
+    background: #fff;
+}
+
+.order__additional-content input[type="checkbox"]:checked::after {
+    content: "✔";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FED100;
+    font-size: 14px;
+}
+
+.order__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 90px;
+    width: 700px;
+}
+
+.order__timer {
+    font-size: 96px;
+    font-weight: 400;
+    color: #333;
+}
+
+.order__button{
+    display: block;
+}
+
+.order__button_container{
+    position: relative;
+    z-index: 1;
+}
+
+.order__button_up {
+    display: inline-block;
+    background-color: #FF352B;
+    color: #F2F2F2;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 42px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+.order__button_down {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border: 1px solid #FED100;
+    height: 49px;
+    width: 261px;
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+.order__button:hover .order__button_up {
+    background-color: #FF772B;
+    color: #fff;
+}
+
+.order__button:hover .order__button_down {
+    background: #FED100;
+}
+
+.order__button_up--mobile{
+    display: none;
+}
+
+.order__consent {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #333;
+    margin-top: 23px;
+}
+
+.order__consent input[type="checkbox"] {
+    appearance: none;
+    width: 13px;
+    height: 13px;
+    border: 2px solid #333;
+    border-radius: 2px;
+    position: relative;
+    cursor: pointer;
+}
+
+.order__consent input[type="checkbox"]:checked {
+    border-color: #333;
+}
+
+.order__consent input[type="checkbox"]:checked::after {
+    content: "✔";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333;
+    font-size: 9.5px;
+    font-weight: 800;
+}
+
 /* Main */
 main {
     padding-top: 150px; 
@@ -1116,6 +1404,115 @@ main {
     .reviews__all {
         margin-top: 56px;
     }
+
+    /* Секция "Заказ переезда" */
+    .order {
+        padding: 75px 0 0 0;
+    }
+
+    .order__title {
+        margin: 0 auto;
+        margin-bottom: 4px;
+        width: 394px;
+    }
+
+    .order__title span {
+        display: none;
+    }
+
+    .order__subtitle {
+        font-size: 24px;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 68px;
+        max-width: 465px;
+    }
+
+    .order__group__conten{
+        gap: 85px;
+        margin-bottom: 52px;
+    }
+
+    .order__group__conten:nth-child(2){
+        margin-bottom: 65px;
+    }
+
+    .order__group label {
+        font-size: 26px;
+        margin-bottom: 12px;
+    }
+
+    .order__group input[type="text"],
+    .order__group input[type="tel"],
+    .order__group select {
+        font-size: 18px;
+    }
+
+    .order__radio-group {
+        margin-bottom: 56px;
+        row-gap: 20px;
+        column-gap: 40px;
+    }
+
+    .order__radio-group label{
+        font-size: 16px;
+    }
+
+    .order__group .order__radio__label{
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .order__group .order__additional-label{
+        font-size: 20px;
+    }
+
+    .order__additional-content label {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 16px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #333;
+        margin-bottom: 0px;
+    }
+
+    .order__footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 66px;
+        width: 100%;
+    }
+
+    .order__timer {
+        display: none;
+    }
+
+    .order__button_up {
+        font-size: 20px;
+    }
+
+    .order__button_down {
+        border: 2px solid #FED100;
+        height: 55px;
+        width: 304px;
+    }
+
+    .order__consent {
+        font-size: 16px;
+        margin-top: 19px;
+    }
+
+    .order__consent input[type="checkbox"] {
+        width: 15px;
+        height: 15px;
+    }
+
+    .order__consent input[type="checkbox"]:checked::after {
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 620px) {
@@ -1288,6 +1685,54 @@ main {
 
     .reviews__dots{
         margin-top: 20px;
+    }
+
+    .order__title {
+        font-size: 24px;
+        width: 100%;
+    }
+
+    .order__subtitle {
+        font-size: 19px;
+        margin-bottom: 52px;
+    }
+
+    .order__group__conten{
+        gap: 50px;
+        margin-bottom: 45px;
+    }
+
+    .order__group__conten{
+        flex-direction: column;
+    }
+
+    .order__group__conten:nth-child(2){
+        display: none;
+    }
+
+    .order__radio-group{
+        margin-bottom: 33px;
+    }
+
+    .order__group .order__radio__label{
+        margin-bottom: 25px;
+    }
+
+    .order__footer{
+        margin-top: 50px;
+    }
+
+    .order__button_up{
+        font-size: 16px;
+    }
+
+    .order__button_down {
+        width: 260px;
+        height: 100%;
+    }
+
+    .order__consent {
+        font-size: 14px;
     }
 }
 
@@ -1613,5 +2058,74 @@ main {
         padding: 17px;
         font-size: 20px;
         margin-top: 48px;
+    }
+
+    /* Секция "Заказ переезда" */
+    .order {
+        padding: 38px 0 0 0;
+    }
+
+    .order__title {
+        margin-bottom: 8px;
+        font-size: 20px;
+        width: 200px;
+        max-width: 200px;
+    }
+
+    .order__subtitle {
+        font-size: 16px;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 43px;
+        max-width: 465px;
+    }
+
+    .order__group__conten{
+        gap: 22px;
+        margin-bottom: 60px;
+    }
+
+    .order__group input[type="text"],
+    .order__group input[type="tel"],
+    .order__group select {
+        font-size: 16px;
+    }
+
+    .order__group:not(:nth-child(1), :nth-child(2)),
+    .order__additional{
+        display: none;
+    }
+
+    .order__footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .order__button_up {
+        display: none;
+    }
+
+    .order__button_up--mobile{
+        display: inline-block;
+        font-size: 20px;
+        padding: 19.5px 45px;
+        font-weight: 500;
+    }
+
+    .order__button_down {
+        display: none;
+    }
+
+    .order__consent {
+        font-size: 12px;
+        margin-top: 18px;
+        justify-content: center;
+    }
+
+    .order__consent input[type="checkbox"]:checked::after {
+        font-size: 12px;
     }
 }
