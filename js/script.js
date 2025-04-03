@@ -63,4 +63,69 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateTimer();
     const timerInterval = setInterval(updateTimer, 1000);
+
+    // Слайдер
+    const tabs = document.querySelectorAll('.fleet__tab');
+    const slides = document.querySelectorAll('.fleet__slide');
+    const dots = document.querySelectorAll('.fleet__dot');
+    const prevArrow = document.querySelector('.fleet__arrow--left');
+    const nextArrow = document.querySelector('.fleet__arrow--right');
+    const fleet__slide__title = document.getElementById('fleet__slide__title')
+    let fleet_slide_titles = ['Газель 3 метра / 1,5 тонны', 'Газель 4 метра / 2 тонны', 'Газель 5 метров / 3 тонны'];
+
+    let currentSlide = 0;
+
+    // Функция для показа слайда
+    function showSlide(index) {
+        if (index === currentSlide) return; // Если слайд уже активен, ничего не делаем
+
+        // Убираем активные классы
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        tabs.forEach(tab => tab.classList.remove('active'));
+
+        // Показываем нужный слайд
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+        tabs[index].classList.add('active');
+
+        fleet__slide__title.innerHTML = fleet_slide_titles[index];
+
+        currentSlide = index;
+    }
+
+    // Переключение через табы
+    tabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => {
+            showSlide(index);
+        });
+    });
+
+    // Переключение через точки
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            showSlide(index);
+        });
+    });
+
+    // Переключение через стрелки
+    prevArrow.addEventListener('click', () => {
+        let newIndex = currentSlide - 1;
+        if (newIndex < 0) {
+            newIndex = slides.length - 1;
+        }
+        showSlide(newIndex);
+    });
+
+    nextArrow.addEventListener('click', () => {
+        let newIndex = currentSlide + 1;
+        if (newIndex >= slides.length) {
+            newIndex = 0;
+        }
+        showSlide(newIndex);
+    });
+
+    // Показываем первый слайд при загрузке
+    showSlide(currentSlide);
+    
 });
