@@ -167,9 +167,9 @@
             <h2 class="fleet__title">Автопарк</h2>
             <p class="fleet__subtitle">10 видов автомобилей от 800 кг до 10 тонн</p>
             <div class="fleet__tabs">
-                <button class="fleet__tab active">Газели</button>
-                <button class="fleet__tab">Каблуки</button>
-                <button class="fleet__tab">Грузовики</button>
+                <button class="fleet__tab active" data-tab="0">Газели</button>
+                <button class="fleet__tab" data-tab="1">Каблуки</button>
+                <button class="fleet__tab" data-tab="2">Грузовики</button>
             </div>
             <div class="fleet__slider">
                 <button class="fleet__arrow fleet__arrow--left">
@@ -177,7 +177,7 @@
                 </button>
                 <div class="fleet__slides">
                     <!-- Слайд 1 -->
-                    <div class="fleet__slide active">
+                    <div class="fleet__slide active" data-slide="0">
                         <div class="fleet__image__tablet">
                             <img src="img/g_10 1.png" alt="Газель 3 метра">
                         </div>
@@ -196,9 +196,9 @@
                         </div>
                     </div>
                     <!-- Слайд 2 -->
-                    <div class="fleet__slide">
+                    <div class="fleet__slide" data-slide="1">
                         <div class="fleet__image__tablet">
-                            <img src="img/g_10 1.png" alt="Газель 4 метра">
+                            <img src="img/4_lu 1.png" alt="Газель 4 метра">
                         </div>
                         <div class="fleet__content">
                             <h3 class="fleet__slide-title">Газель 4 метра <span>/ 2 тонны</span></h3>
@@ -211,13 +211,13 @@
                             <a href="#" class="fleet__button">Заказать</a>
                         </div>
                         <div class="fleet__image">
-                            <img src="img/gazel.png" alt="Газель 4 метра">
+                            <img src="img/4_lu 1.png" alt="Газель 4 метра">
                         </div>
                     </div>
                     <!-- Слайд 3 -->
-                    <div class="fleet__slide">
+                    <div class="fleet__slide" data-slide="2">
                         <div class="fleet__image__tablet">
-                            <img src="img/g_10 1.png" alt="Газель 5 метра">
+                            <img src="img/truck_PNG16235 1.png" alt="Газель 5 метра">
                         </div>
                         <div class="fleet__content">
                             <h3 class="fleet__slide-title">Газель 5 метров <span>/ 3 тонны</span></h3>
@@ -230,7 +230,7 @@
                             <a href="#" class="fleet__button">Заказать</a>
                         </div>
                         <div class="fleet__image">
-                            <img src="img/gazel.png" alt="Газель 5 метров">
+                            <img src="img/truck_PNG16235 1.png" alt="Газель 5 метров">
                         </div>
                     </div>
                 </div>
@@ -238,10 +238,11 @@
                     <i class='bx bx-chevron-right'></i>
                 </button>
             </div>
+            <h3 class="fleet__slide-title" id="fleet__slide__title">Газель 3 метра / 1,5 тонны</h3>
             <div class="fleet__dots">
-                <span class="fleet__dot active"></span>
-                <span class="fleet__dot"></span>
-                <span class="fleet__dot"></span>
+                <span class="fleet__dot active" data-slide="0"></span>
+                <span class="fleet__dot" data-slide="1"></span>
+                <span class="fleet__dot" data-slide="2"></span>
             </div>
             <a href="#" class="fleet__button__tablet">Заказать</a>
         </div>

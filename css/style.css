@@ -365,7 +365,7 @@ body {
 
 /* Секция "Автопарк" */
 .fleet {
-    padding: 102px 0 0 0;
+    padding: 102px 0 46px 0;
 }
 
 .fleet__container {
@@ -404,7 +404,7 @@ body {
     color: #333;
     padding: 13px 63px;
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: all 0.4s ease;
 }
 
 .fleet__tab.active {
@@ -416,15 +416,27 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 430px;
 }
 
 .fleet__slides {
+    position: relative;
     width: 100%;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .fleet__slide {
-    display: none;
+    opacity: 0;
+    transform: translateX(110%);
+    transition: all 0.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -432,10 +444,16 @@ body {
 }
 
 .fleet__slide.active {
+    opacity: 1;
+    transform: translateX(0);
+    position: relative;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 112px;
 }
 
-.fleet__image__tablet{
+.fleet__image__tablet {
     display: none;
 }
 
@@ -498,12 +516,19 @@ body {
     box-shadow: 0px 4px 24px 0px #FED100;
 }
 
-.fleet__button__tablet{
+.fleet__button__tablet {
     display: none;
+}
+
+.fleet__image {
+    width: 100%;
+    max-width: 600px;
 }
 
 .fleet__image img {
     width: 100%;
+    max-width: 600px;
+    object-fit: contain;
 }
 
 .fleet__arrow {
@@ -526,6 +551,26 @@ body {
 }
 
 .fleet__dots {
+    display: none;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.fleet__dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.fleet__dot.active {
+    background-color: #FED100;
+}
+
+#fleet__slide__title{
     display: none;
 }
 
@@ -1423,7 +1468,7 @@ main {
         width: 462px;
         justify-content: space-between;
         margin: 0 auto;
-        margin-bottom: 82px;
+        margin-bottom: 40px;
     }
 
     .fleet__tab {
@@ -1437,6 +1482,11 @@ main {
         font-weight: 500;
         border: none;
         border-bottom: 1px solid #FED100;
+    }
+
+    .fleet__slider{
+        height: 370px;
+        padding: 0 10px;
     }
 
     .fleet__slide {
@@ -1466,11 +1516,15 @@ main {
         margin-bottom: 24px;
     }
 
+    #fleet__slide__title{
+        display: block;
+    }
+
     .fleet__slide-title span {
         display: inline-block;
     }
 
-    .fleet__list{
+    .fleet__content{
         display: none;
     }
 
@@ -1478,10 +1532,6 @@ main {
         display: inline-block;
         font-size: 20px;
         padding: 22px 124px;
-    }
-
-    .fleet__button{
-        display: none;
     }
 
     .fleet__image{
@@ -2296,6 +2346,10 @@ main {
     .fleet__image__tablet img {
         width: 100%;
         max-width: 321px;
+    }
+
+    .fleet__slider{
+        height: 230px;
     }
 
     .fleet__slide-title {
